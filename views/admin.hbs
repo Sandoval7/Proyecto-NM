@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/admin/admin.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <title>Document</title>
+</head>
+<body>
+    <div class="navbar">
+        <a href="">
+            <button class="btn">
+                <div class="icon">
+                    <span class="material-symbols-outlined">person</span>
+                </div>
+                <p>Create New Computer</p>
+        </button>
+        </a>
+    </div>
+             <table class="datatable">
+             <thead>
+                 <tr>
+                    <th>ID</th>
+                    <th>image</th>
+                    <th>name</th>
+                    <th>description</th>
+                    <th>price</th>
+                    <th></th>
+                    <th></th>
+                 </tr>
+             </thead>
+             <tbody>
+                {{#each row}}
+                <tr class="article">
+                    <td>{{id}}</td>
+                    <td>{{image}}</td>
+                    <td>{{name}}</td>
+                    <td>{{description}}</td>
+                    <td>{{price}}</td>
+                    <td>
+                        <a href="/EditarProveedor/{{_id}}">
+                            <button>
+                                <ion-icon name="pencil-outline"></ion-icon>
+                            </button> 
+                        </a>
+                     </td>
+                     <td>
+                         <form action="/EliminarProveedor/{{_id}}?_method=DELETE" method="POST">
+                            <input type="hidden" name="_method" id="DELETE">
+                            <button>
+                                <ion-icon name="trash-outline"></ion-icon>
+                            </button>
+                         </form>
+                     </td>
+                </tr>
+                {{/each}}
+             </tbody>
+
+         </table>
+</body>
+</html>

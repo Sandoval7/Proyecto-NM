@@ -3,6 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const hbs = require('hbs')
 
 //conexion base de datos
 const mysql = require('mysql')
@@ -18,6 +19,7 @@ var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
+hbs.registerPartials(__dirname + '/views/partials')
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -25,19 +27,39 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
 
 //usamos las base de datos 
-app.use(myConnection(mysql,{
-  host: 'localhost',
-  user: 'root',
-  passsword: 'root',
-  port: 3306,
-  database: 'CRUD-NM'
-}, 'single'));
 
+app.use(
+  myConnection(mysql,{
+    host:'localhost',
+    user:'root',
+    password:'root',
+    port:3306,
+    database:'dbcomputer'
+  },'single')
+   );
+   /*
+   var conexion= mysql.createConnection({
+     host : 'localhost',
+  database : 'dbnodemysql',
+  user : 'root',
+  password : 'root',
+});
 
+conexion.connect(function(err) {
+  if (err) {
+    console.error('Error de conexion: ' + err.stack);
+    return;
+  }
+  console.log('Conectado con el identificador ' + conexion.threadId);
+  
+});
+
+*/
+
+app.use('/', indexRouter);
+app.use('/users', usersRouter);
 
 
 

@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 1%;
+}
+
+.navbar a {
+  text-decoration: none;
+}
+
+.navbar a .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navbar a .btn .icon {
+  margin-top: 8px;
+  padding-right: 10px;
+}
+
+.navbar a .btn .icon span {
+  font-size: 40px;
+}
+
+.navbar a .btn p {
+  font-size: 20px;
+}
+/*# sourceMappingURL=admin.css.map */

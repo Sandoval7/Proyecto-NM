@@ -1,0 +1,165 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.image {
+  width: 20%;
+}
+
+.image img {
+  width: 45%;
+  padding-left: 25%;
+  margin-inline: 2%;
+}
+
+.search {
+  width: 35%;
+  padding-top: 1.5%;
+  margin-inline: 5%;
+}
+
+.search .bar-search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid #cbcbcb;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.search .bar-search input {
+  width: 95%;
+  text-decoration: none;
+  border: none;
+}
+
+.search .bar-search .icon {
+  width: 5%;
+  position: relative;
+  padding-top: 1%;
+  padding-left: 1.5%;
+  height: 50%;
+  background-color: #ebebeb;
+}
+
+.acount {
+  width: 15%;
+}
+
+.acount button {
+  background: none;
+  border: none;
+  padding: 10px;
+  padding-inline: 20px;
+  margin: 8%;
+  margin-inline: 17%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 20px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.acount button:hover {
+  background: #ebebeb;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.acount button p {
+  margin: 0;
+  padding: 0;
+}
+
+.admin {
+  width: 15%;
+}
+
+.admin a {
+  text-decoration: none;
+}
+
+.admin button {
+  background: none;
+  border: none;
+  padding: 10px;
+  padding-inline: 20px;
+  margin: 8%;
+  margin-inline: 17%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 20px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.admin button:hover {
+  background: #ebebeb;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.admin button p {
+  margin: 0;
+  padding: 0;
+}
+
+.cart {
+  width: 15%;
+}
+
+.cart button {
+  background: none;
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px;
+  padding-inline: 30px;
+  margin: 4%;
+  margin-top: 8%;
+  display: flex;
+  font-size: 20px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.cart button:hover {
+  background: #ebebeb;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.cart button p {
+  margin: 0;
+  padding: 0;
+  padding-inline: 5px;
+}
+
+.cart button .number {
+  background-color: #f86565;
+  border-radius: 30px;
+}
+
+section {
+  height: 100vh;
+}
+
+footer {
+  text-align: center;
+  border-top: 1px solid #ebebeb;
+}
+/*# sourceMappingURL=customer.css.map */
